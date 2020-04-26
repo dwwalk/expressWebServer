@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="/img/weather.png">
+        <!-- <link rel="stylesheet" href="./css/styles.css">  an example of relative path-->
+        <link rel="stylesheet" href="/css/styles.css"> 
+
+    </head>
+    <body>
+        <!--implement a basic flexbox-->
+        <div class='main-content'>
+            {{>header}}
+            <img  class="portrait" src='/img/dan.png'>
+            <p>Use this site to get the weather</p>
+        <form>
+            <input placeholder="Enter Location">
+            <button>Search</button>
+        </form>
+
+            <!-- The following paragraphs are the location of the Weather app -->
+            <!-- If things go wrong line 1 error message line 2 Empty -->
+            <!-- If things go right line 1 Location line 2 Forcast -->
+            <!-- Line 1 -->
+            <p id="message-1"></p>
+             <!-- Line 2 -->
+            <p id="message-2"></p>
+            <!-- Line 3 -->
+            <p id="message-3"></p>
+             <!-- Line 4 -->
+            <p id="message-4"></p>
+        </div>
+           {{>footer}}
+           
+           <script src="/js/app.js"></script>
+           
+    </body>
+</html>

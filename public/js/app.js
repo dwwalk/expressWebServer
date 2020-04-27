@@ -37,7 +37,7 @@ weatherForm.addEventListener('submit', (event) => {
 // fetch data from the server side to the UI browser based API
 // fetch is not accessable in node.js
 
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             //console.log(data)
             if(data.error) {

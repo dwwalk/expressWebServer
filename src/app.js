@@ -30,6 +30,8 @@ const forecast = require('./utils/forecast')
 // Call the express function
 
 const app = express()
+// used to support the heroku port number
+const port = process.env.PORT || 3000
 
 console.log('This is the __dirname ' + __dirname)
 console.log('This is the __filename ' + __filename)
@@ -241,9 +243,9 @@ app.get('*', (req, res) => {
 
 // dev port 3000
 
-app.listen(3000, () => {
+app.listen(port, () => {
 
-    console.log('Server is up on port 3000')
+    console.log('Server is up on port' + port)
 })
 
 

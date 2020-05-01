@@ -13,12 +13,15 @@ request({url: url, json: true},(error, response)=>{
   } else {
 
     //console.log('forcast.js after successfully ')
-    //console.log(response)
+    console.log(response.body)
 
     callback(undefined, {
         temperature: response.body.currently.temperature,
         precipProbability: response.body.currently.precipProbability,
-        summary: response.body.currently.summary
+        summary: response.body.currently.summary,
+        timezone: response.body.timezone,
+        visibility: response.body.currently.visibility,
+        ozone: response.body.currently.ozone
     })
 
     

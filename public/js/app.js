@@ -14,6 +14,9 @@ const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 const messageThree = document.querySelector('#message-3')
 const messageFour = document.querySelector('#message-4')
+const messageFive = document.querySelector('#message-5')
+const messageSix = document.querySelector('#message-6')
+const messageSeven = document.querySelector('#message-7')
 
 //messageOne.textContent = 'My dog has flees.'
 
@@ -23,6 +26,9 @@ messageOne.textContent = ''
 messageTwo.textContent = ''
 messageThree.textContent = ''
 messageFour.textContent = ''
+messageFive.textContent = ''
+messageSix.textContent = ''
+messageSeven.textContent = '' 
 
 weatherForm.addEventListener('submit', (event) => {
     event.preventDefault()
@@ -32,6 +38,9 @@ weatherForm.addEventListener('submit', (event) => {
     messageTwo.textContent = ''
     messageThree.textContent = ''
     messageFour.textContent = ''
+    messageFive.textContent = ''
+    messageSix.textContent = ''
+    messageSeven.textContent = ''       
 
     
 // fetch data from the server side to the UI browser based API
@@ -47,6 +56,10 @@ weatherForm.addEventListener('submit', (event) => {
                 messageTwo.textContent = ''
                 messageThree.textContent = ''
                 messageFour.textContent = ''
+                messageFive.textContent = ''
+                messageSix.textContent = ''
+                messageSeven.textContent = ''       
+            
                } else {
                    //console.log('public\\src\\app.js output location ' + data.location)
                    //console.log('public\\src\\app.js output forecast ' + data.forecast)
@@ -56,7 +69,10 @@ weatherForm.addEventListener('submit', (event) => {
                 messageTwo.textContent = 'public\\src\\app.js output forecast ' + data.forecast
                 messageThree.textContent = 'public\\src\\app.js output temperature ' + data.temperature
                 messageFour.textContent = 'public\\src\\app.js output Precipitation % ' + data.precipProbability
-
+                messageFive.textContent = 'public\\src\\app.js output timezone % ' + data.timezone
+                messageSix.textContent = 'public\\src\\app.js output visibility % ' + data.visibility
+                messageSeven.textContent = 'public\\src\\app.js output ozone % ' + data.ozone     
+            
             }
         })
     })

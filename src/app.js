@@ -182,7 +182,11 @@ app.get('/weather', (req, res) => {
             temperature: forecastdata.temperature,
             precipProbability: forecastdata.precipProbability,
             forecast: forecastdata.summary,
-            weathererror: error 
+            weathererror: error, 
+            timezone: forecastdata.timezone,
+            visibility: forecastdata.visibility,
+            ozone: forecastdata.ozone
+
             })
         })
     })
